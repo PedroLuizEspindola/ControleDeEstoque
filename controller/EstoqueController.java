@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import model.Produto;
 import view.EstoqueView;
-public class EstoqueController {
+public class EstoqueController implements PadraoController {
     private List<Produto> estoque;
     private EstoqueView view;
     private final String ARQUIVO_ESTOQUE = "c:/Temp/ws-eclipse/estoque.txt";
@@ -84,7 +84,7 @@ public class EstoqueController {
     public void salvarEstoqueEmArquivo() {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(ARQUIVO_ESTOQUE))) {
             for (Produto produto : estoque) {
-                writer.write("nome; " + produto.getNome() + "quantidade; " + produto.getQuantidade() + "preco; " + produto.getPreco());
+                writer.write("nome;" + produto.getNome() + " quantidade;" + produto.getQuantidade() + " preco;" + produto.getPreco());
                 writer.newLine();
             }
         } catch (IOException e) {
