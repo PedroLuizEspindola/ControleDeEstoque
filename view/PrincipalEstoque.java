@@ -32,7 +32,7 @@ public class PrincipalEstoque {
                     int quantidadeProduto = scanner.nextInt();
                     System.out.println("Digite o preço:");
                     double precoProduto = scanner.nextDouble();
-                    scanner.nextLine(); // Limpar o buffer do scanner
+                    scanner.nextLine(); 
                     controller.adicionarProduto(nomeProduto, quantidadeProduto, precoProduto);
                     System.out.println("Produto adicionado com sucesso!");
                     break;
@@ -46,7 +46,7 @@ public class PrincipalEstoque {
                     String nomeAtualizar = scanner.nextLine();
                     System.out.println("Digite a nova quantidade:");
                     int novaQuantidade = scanner.nextInt();
-                    scanner.nextLine(); // Limpar o buffer do scanner
+                    scanner.nextLine(); 
                     controller.atualizarQuantidade(nomeAtualizar, novaQuantidade);
                     break;
                 case 4:
@@ -54,7 +54,7 @@ public class PrincipalEstoque {
                     controller.exibirEstoque();
                     break;
                 case 5:
-                	System.out.println("estoque arquivado");
+                	System.out.println("Estoque arquivado");
                 	controller.exibirArquivoEstoque();
                 	break;
                 case 0:

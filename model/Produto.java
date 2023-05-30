@@ -11,7 +11,6 @@ public class Produto {
         this.preco = preco;
     }
 
-    // Getters e setters
 
     public String getNome() {
         return nome;
